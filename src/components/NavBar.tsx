@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { buttonVariants } from './ui/button';
 import { ModeToggle } from './ModeToggle';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 
@@ -17,23 +16,17 @@ import { Container } from './Container';
 export function NavBar() {
     return (
         <nav className='h-16 bg-background/60 sticky top-0 border-b px-a backdrop-blur z-50'>
-            <Container className='h-full flex items-center my-0'>
+            <Container className='h-full flex items-center justify-between my-0'>
                 <div className='font-bold text-xl'>
                     <Link href="/">
                         BenjaminHaag.IT
                     </Link>
                 </div>
-                <ul className='hidden md:flex w-full justify-end space-x-4 items-center'>
+                <ul className='hidden md:flex space-x-4 items-center'>
                     <li><Link href="/about">About</Link></li>
                     <li><Link href="/blog">Blog</Link></li>
-                    <li className='buttons space-x-g'>
-                        <Link href="/login" className={buttonVariants({ variant: "outline" })}>Login</Link>
-                        <Link href="/signup" className={buttonVariants({ variant: "outline" })}>Signup</Link>
-                    </li>
-                    <li>
-                        <ModeToggle />
-                    </li>
                 </ul>
+                <ModeToggle />
                 <ul className='md:hidden flex w-full justify-end space-x-4 items-center'>
 
                     <Sheet>

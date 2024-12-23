@@ -107,14 +107,13 @@ code[data-line-numbers-max-digits="4"]>[data-line]::before {
 }
 [data-highlighted-line] {
   background: #c8c8ff1a;
-  --tw-border-opacity: 1;
   border-left-width: 3px;
   padding-left: 0px;
-  border-left-color: rgb(96 165 250 / var(--tw-border-opacity));
+  border-left-color: rgb(96 165 250);
 }
 
 [data-highlighted-chars] {
-  background: #c8c8ff31;
+  background: #c8c8ff3a;
   padding: 3px 5px;
   margin: -3px -5px;
   border-radius: 2px;

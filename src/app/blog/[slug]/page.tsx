@@ -14,6 +14,12 @@ import matter from 'gray-matter'
 import fs from 'fs'
 import OnThisPage from '@/components/OnThisPage'
 
+interface PostPageProps {
+    params: {
+        slug: string;
+    };
+};
+
 const processor = unified()
     .use(remarkParse)
     .use(remarkRehype, {
@@ -34,7 +40,7 @@ const processor = unified()
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings);
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+export default async function PostPage({ params }: PostPageProps) {
 
     const filePath = `content/${params.slug}.md`;
     const fileContent = fs.readFileSync(filePath, "utf-8");

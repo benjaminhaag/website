@@ -41,27 +41,31 @@ export default function BlogPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {posts.map((post, index) => (
                         <div
-                            key={index}
-                            className="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                            className="p-[1px] rounded-lg bg-[#595959aa] hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-secondary transition duration-300"
                         >
-                            <AspectRatio ratio={16 / 9}>
-                                <Image
-                                    src={defaultImage}
-                                    alt={post.title}
-                                />
-                            </AspectRatio>
-                            <div className="p-4">
-                                <h2 className="text-xl font-semibold mb-2">
-                                    {post.title}
-                                </h2>
-                                <p className="text-sm mb-4">{post.date}</p>
-                                <p className="mb-4">{post.excerpt}</p>
-                                <Link
-                                    href={`/blog/${post.slug}`}
-                                    className="inline-block text-indigo-600 hover:underline font-medium"
-                                >
-                                    Read More
-                                </Link>
+                            <div
+                                key={index}
+                                className="bg-background rounded-lg overflow-hidden" 
+                            >
+                                <AspectRatio ratio={16 / 9}>
+                                    <Image
+                                        src={defaultImage}
+                                        alt={post.title}
+                                    />
+                                </AspectRatio>
+                                <div className="p-4">
+                                    <h2 className="text-xl font-semibold mb-2">
+                                        {post.title}
+                                    </h2>
+                                    <p className="text-sm mb-4">{post.date}</p>
+                                    <p className="mb-4">{post.excerpt}</p>
+                                    <Link
+                                        href={`/blog/${post.slug}`}
+                                        className="inline-block text-indigo-600 hover:underline font-medium"
+                                    >
+                                        Read More
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     ))}

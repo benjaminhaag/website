@@ -15,10 +15,31 @@ import fs from 'fs'
 import OnThisPage from '@/components/OnThisPage'
 
 interface PostPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 };
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+    const files = fs.readdirSync("content", "utf-8");
+
+    return files.map((filename) => {
+        return { slug: filename.replace(/\.[^/.]+$/, "")};
+    });
+}
+
+export async function generateMetadata(props: PostPageProps) {
+  const params = await props.params;
+  const filePath = `content/${params.slug}.md`;
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const {data} = matter(fileContent)
+  return {
+      title: data.title,
+      description: data.description
+    }
+}
 
 const processor = unified()
     .use(remarkParse)
@@ -42,7 +63,7 @@ const processor = unified()
 
 export default async function PostPage({ params }: PostPageProps) {
 
-    const filePath = `content/${params.slug}.md`;
+    const filePath = `content/${(await params).slug}.md`;
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent);
 

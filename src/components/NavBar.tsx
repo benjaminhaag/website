@@ -15,7 +15,7 @@ import { Container } from './Container';
 
 export function NavBar() {
     return (
-        <nav className='h-16 bg-background/60 sticky top-0 border-b px-a backdrop-blur z-50'>
+        <nav className='h-16 w-full bg-background/60 fixed top-0 border-b px-a backdrop-blur z-50'>
             <Container className='h-full flex items-center justify-between my-0'>
                 <div className='font-bold text-xl'>
                     <Link href="/">

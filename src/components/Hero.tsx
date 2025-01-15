@@ -7,7 +7,7 @@ import Parallax, { Layer } from './pulseui/Parallax';
 
 export default function Hero() {
   return (
-    <Parallax>
+    <Parallax className='h-dvh'>
       <Layer speed={0.3}>
         <div className='relative h-dvh w-full'>
           <Image alt="Background Image" className='object-cover' src={Background} fill />

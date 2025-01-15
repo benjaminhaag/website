@@ -4,10 +4,11 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type ParallaxProps = {
+  className: string,
   children: React.ReactElement<LayerProps>[];
 };
 
-export default function Parallax({ children }: ParallaxProps) {
+export default function Parallax({ className, children }: ParallaxProps) {
 
   const [height, setHeight] = useState(0);
 
@@ -26,11 +27,11 @@ export default function Parallax({ children }: ParallaxProps) {
     setLayers(layers);
   }, [children]);
 
-  useEffect(() => {
-    if (layerRefs.length === 0) return;
-    const height = Math.max(...layerRefs.map((layer) => layer.current ? layer.current.clientHeight : 0));
+  useEffect(()=>{
+    if (!parallaxRef.current) return;
+    const height = (parallaxRef.current as HTMLElement).clientHeight;
     setHeight(height);
-  }, [layerRefs]);
+  },[parallaxRef]);
 
   useGSAP(() => {
     if (height === 0) return;
@@ -52,7 +53,7 @@ export default function Parallax({ children }: ParallaxProps) {
   }, [height]);
 
   return (
-    <div ref={parallaxRef} style={{height, overflow: 'hidden'}}>
+    <div ref={parallaxRef} className={className} style={{overflow: 'hidden'}}>
       { layers }
     </div>
   )
@@ -78,7 +79,7 @@ function RenderedLayer({ ref, children, speed }: RenderedLayerProps) {
 
   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (!ref.current) return;
     setHeight((ref.current as HTMLElement).clientHeight);
   }, [ref]);

@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from 'react';
+import { Container } from '@/components/Container';
 
 export default function HomePage() {
 
@@ -31,10 +32,12 @@ export default function HomePage() {
       <section>
         <div className='mt-16'>
         </div>
-        <LoremIpsum />
-        {/*<CountUp />*/}
-        <div ref={box} className='p-5'>Hello</div>
-        <LoremIpsum />
+        <Container>
+          <LoremIpsum />
+          {/*<CountUp />*/}
+          <div ref={box} className='p-5'>Hello</div>
+          <LoremIpsum />
+        </Container>
       </section> 
     </main>
   );

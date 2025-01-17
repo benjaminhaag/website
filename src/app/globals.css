@@ -2,13 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Yantramanav';
+  src: url('/fonts/Yantramanav/Yantramanav-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yantramanav';
+  src: url('/fonts/Yantramanav/Yantramanav-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yantramanav';
+  src: url('/fonts/Yantramanav/Yantramanav-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yantramanav';
+  src: url('/fonts/Yantramanav/Yantramanav-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yantramanav';
+  src: url('/fonts/Yantramanav/Yantramanav-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Yantramanav';
+  src: url('/fonts/Yantramanav/Yantramanav-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Yantramanav, Arial, Helvetica, sans-serif;
 }
 
 @layer base {
   :root {
-    --background: 48, 22.39%, 90%;
+    --background: 48 22.39 90;
     --foreground: 219.13 23.71% 19.02%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;

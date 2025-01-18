@@ -19,7 +19,7 @@ export function NavBar() {
             <Container className='h-full flex items-center justify-between my-0'>
                 <div className='font-bold text-xl'>
                     <Link href="/">
-                        BenjaminHaag.IT
+                        BenjaminHaag<span className='text-secondary'>.</span><span className='text-primary'>IT</span>
                     </Link>
                 </div>
                 <ul className='hidden md:flex space-x-4 items-center'>

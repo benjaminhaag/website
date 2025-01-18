@@ -11,7 +11,7 @@ export default function Hero() {
     <Parallax className='h-dvh'>
       <Layer speed={0.3}>
         <div className='relative h-dvh w-full'>
-          <Image alt="Background Image" className='object-cover' src={Background} fill />
+        {/*<Image alt="Background Image" className='object-cover' src={Background} fill />*/}
         </div>
       </Layer>
       <Layer speed={0.4}>
@@ -19,12 +19,16 @@ export default function Hero() {
           <Container className='h-full pt-12 flex items-center justify-end'>
             <Image alt="Background Image" sizes='100vw' className='h-full w-auto' src={Box} />
           </Container>
-        {/*<Image alt="Background Image" className='object-contain' src={Box} fill />*/}
         </div>
       </Layer>
       <Layer speed={0.5}>
-        <div className='relative h-dvh w-full flex items-center justify-center'>
-          <h1 className='text-white'><Typed></Typed></h1>
+        <div className='relative h-dvh w-full flex items-center justify-start'>
+          <Container>
+            <div className='w-[50%]'>
+              <h1 className="text-4xl md:text-6xl pb-6">Expert Solutions for<br /><span className="text-primary"><Typed /></span><span className="text-secondary">.</span></h1>
+              <h2 className="text-2xl pb-10 xl:pb-14 text-center">Bring Your Vision to Life – Let’s Collaborate to Find the Best Solution for You!</h2>
+            </div>
+          </Container>
         </div>
       </Layer>
     </Parallax>

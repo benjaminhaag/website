@@ -11,7 +11,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { Container } from './Container';
+import { Container } from './pulseui/Container';
 
 export function NavBar() {
     return (

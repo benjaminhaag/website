@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '@/components/Container'
+import { Container } from '@/components/pulseui/Container';
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'

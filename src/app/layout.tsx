@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" className="scroll-p-20 scroll-smooth" suppressHydrationWarning>
+      <html lang="en" className="scroll-p-20 scroll-smooth">
         <head />
         <body>
           <ThemeProvider

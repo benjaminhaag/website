@@ -1,7 +1,7 @@
 import React from 'react';
 import fs from 'fs'
 import matter from 'gray-matter'
-import { Container } from "@/components/Container";
+import { Container } from '@/components/pulseui/Container';
 import Link from 'next/link';
 import Image from "next/image"
 import { AspectRatio } from "@/components/ui/aspect-ratio"

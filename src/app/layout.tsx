@@ -29,15 +29,8 @@ export default function RootLayout({
       <html lang="en" className="scroll-p-20 scroll-smooth">
         <head />
         <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
             <NavBar />
             {children}
-          </ThemeProvider>
         </body>
       </html>
     </>

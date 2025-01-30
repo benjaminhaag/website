@@ -15,7 +15,7 @@ import { Container } from './pulseui/Container';
 
 export function NavBar() {
     return (
-        <nav className='h-16 w-full bg-background/60 fixed top-0 border-b px-a backdrop-blur shadow-xl z-50'>
+        <nav className='h-16 w-full bg-background/30 fixed top-0 border-b px-a backdrop-blur shadow-xl z-50'>
             <Container className='h-full flex items-center justify-between my-0'>
                 <div className='font-bold text-xl'>
                     <Link href="/">
@@ -26,7 +26,6 @@ export function NavBar() {
                     <li><Link href="/about">About</Link></li>
                     <li><Link href="/blog">Blog</Link></li>
                 </ul>
-                <ModeToggle />
                 <ul className='md:hidden flex w-full justify-end space-x-4 items-center'>
 
                     <Sheet>

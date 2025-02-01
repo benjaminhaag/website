@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from '@/components/NavBar';
-import { ThemeProvider } from '@/components/theme-provider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-// 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import Footer from "@/components/Footer";
+import Link from "@/components/Link";
+import { PostHogProvider } from "@/providers/PostHogProvider";
+config.autoAddCss = false
 
 export const metadata: Metadata = {
   title: "Benjamin Haag - IT Services",
@@ -29,8 +26,11 @@ export default function RootLayout({
       <html lang="en" className="scroll-p-20 scroll-smooth">
         <head />
         <body>
+          <PostHogProvider>
             <NavBar />
             {children}
+            <Footer />
+          </PostHogProvider>
         </body>
       </html>
     </>

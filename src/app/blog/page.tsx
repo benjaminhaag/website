@@ -42,9 +42,7 @@ export default function BlogPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {posts.map((post, index) => (
                         <Link key={index} href={`/blog/${post.slug}`}>
-                            <div
-                                className="p-[1px] rounded-lg bg-[#595959aa] hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-secondary transition duration-300"
-                            >
+                            <div className="p-[1px] rounded-lg bg-[#595959aa] hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-secondary transition duration-300">
                                 <div
                                     className="bg-background rounded-lg overflow-hidden" 
                                 >

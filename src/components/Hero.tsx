@@ -26,7 +26,7 @@ export default function Hero() {
       <Layer speed={0.5}>
         <div className='relative h-dvh w-full flex items-center justify-start'>
           <Container>
-            <div className='w-[50%] pb-24'>
+            <div className='w-[50%]'>
               <h1 className="text-4xl md:text-6xl pb-10">Expert Solutions for<br /><span className="text-primary"><Typed /></span><span className="text-secondary">.</span></h1>
               <h2 className="text-2xl pb-10 text-center">Empower Your Business with Tailored IT Solutions</h2>
               <div className='text-center'>

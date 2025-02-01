@@ -70,7 +70,7 @@ export default async function PostPage({ params }: PostPageProps) {
     const htmlContent = (await processor.process(content)).toString();
 
     return (
-        <Container className="prose dark:prose-invert">
+        <Container className="prose prose-invert">
             <div className="flex">
                 <OnThisPage className="w-[20%]" htmlContent={htmlContent} />
                 <div className='px-16 w-[80%]'>

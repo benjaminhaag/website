@@ -86,7 +86,7 @@ function RenderedLayer({ ref, children, speed }: RenderedLayerProps) {
   }, [ref]);
 
   return (
-    <div data-speed={speed} ref={ref} style={{ marginBottom: -height }}>
+    <div data-speed={speed} ref={ref} style={{ marginBottom: -height, overflow: "hidden" }}>
       { children }
     </div>
   )

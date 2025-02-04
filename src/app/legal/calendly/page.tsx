@@ -20,7 +20,7 @@ export default function Page() {
       </p>
             <Button disabled className='p-4 pt-5 text-xl font-normal' variant="secondary" asChild>
               <NextLink target='_blank' href="https://calendly.com/benjaminhaagit/meetngreet">
-                I Agree & Proseed 
+                I Agree & Proceed 
               </NextLink>
             </Button>
     </div>

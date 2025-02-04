@@ -1,12 +1,11 @@
 import Hero from '@/components/Hero';
 import { Container } from '@/components/pulseui/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faYoutube, faWhatsapp, faLinkedinIn, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons"
-import Heading3, { Heading2 } from '@/components/Headings';
-import { faHeadset, faLightbulb, faCode, faGlobe, faArrowRight, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { Heading2 } from '@/components/Headings';
+import { faHeadset, faLightbulb, faCode, faGlobe, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image';
 import Profile from '@media/profile.png';
-import Link from '@/components/Link';
 import NextLink from 'next/link';
 import Background from '@media/background.png';
 import { Button } from '@/components/ui/button';
@@ -64,7 +63,7 @@ export default function HomePage() {
                 <h3>Custom Development</h3>
                 <p className='pb-3'>
                   We build tailored software, applications, and backend systems to fit your specific needs. Whether 
-                  it's web or app development, secure messaging, or scalable APIs, our custom solutions bring your 
+                  it&apos;s web or app development, secure messaging, or scalable APIs, our custom solutions bring your 
                   ideas to life with reliability and performance in mind.
                 </p>
                 {/*<Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>*/}
@@ -122,9 +121,9 @@ export default function HomePage() {
       }}>
         <div className='bg-slate-900/40 w-full'>
           <Container className='text-center my-0 py-12'>
-            <Heading2 id="contact">Let's Talk About You!</Heading2>
+            <Heading2 id="contact">Let&apos;s Talk About You!</Heading2>
             <p className='py-3'>
-              Feel free to cantact me directly
+              Feel free to contact me directly
             </p>
             <ul className='flex gap-2 justify-center'>
               <li><NextLink href="tel:+4915202164001"><FontAwesomeIcon icon={faPhone} size='xl' className="p-2 rounded hover:text-primary" /></NextLink></li>

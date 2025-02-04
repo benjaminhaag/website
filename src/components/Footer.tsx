@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from './pulseui/Container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faYoutube, faWhatsapp, faLinkedinIn, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
 import Link from './Link'
 import NextLink from 'next/link';
 

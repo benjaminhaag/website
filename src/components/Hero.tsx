@@ -32,7 +32,7 @@ export default function Hero() {
               <div className='text-center'>
                 <Button className='p-4 pt-5 text-xl font-normal' variant="secondary" asChild>
                   <NextLink href="/#contact">
-                    Let's Chat
+                    Let&apos;s Chat
                   </NextLink>
                 </Button>
               </div>

@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NavBar } from '@/components/NavBar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Footer from "@/components/Footer";
-import Link from "@/components/Link";
 import { PostHogProvider } from "@/providers/PostHogProvider";
 config.autoAddCss = false
 

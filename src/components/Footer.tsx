@@ -3,6 +3,7 @@ import { Container } from './pulseui/Container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube, faWhatsapp, faLinkedinIn, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons"
 import Link from './Link'
+import NextLink from 'next/link';
 
 export default function Footer() {
   return (
@@ -12,12 +13,16 @@ export default function Footer() {
             <div>
              Copyright&copy;2025 - <Link href="https://benjaminhaag.it/">Benjamin Haag</Link>
             </div>
+            <ul className='flex gap-4'>
+              <li><Link href="/legal/imprint">Imprint</Link></li>
+              <li><Link href="/legal/privacy">Privacy Policy</Link></li>
+            </ul>
             <ul className='flex gap-1'>
-              <li><FontAwesomeIcon icon={faLinkedinIn} className="p-2 rounded hover:text-[#0a66c2]" /></li>
-              <li><FontAwesomeIcon icon={faYoutube} className="p-2 rounded hover:text-[#ff0000]" /></li>
+              <li><NextLink href="https://www.linkedin.com/in/haagbenjamin" target='_blank'><FontAwesomeIcon icon={faLinkedinIn} className="p-2 rounded hover:text-[#0a66c2]" /></NextLink></li>
+              {/*<li><FontAwesomeIcon icon={faYoutube} className="p-2 rounded hover:text-[#ff0000]" /></li>
               <li><FontAwesomeIcon icon={faInstagram} className="p-2 rounded hover:text-[#e1306c]" /></li>
-              <li><FontAwesomeIcon icon={faWhatsapp} className="p-2 rounded hover:text-[#128c7e]" /></li>
-              <li><FontAwesomeIcon icon={faGithub} className="p-2 rounded hover:text-[#f5f5f5]" /></li>
+              <li><FontAwesomeIcon icon={faWhatsapp} className="p-2 rounded hover:text-[#128c7e]" /></li>*/}
+              <li><NextLink href="https://github.com/benjaminhaag" target='_blank'><FontAwesomeIcon icon={faGithub} className="p-2 rounded hover:text-[#333]" /></NextLink></li>
             </ul>
           </Container>
         </div>

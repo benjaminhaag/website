@@ -30,7 +30,7 @@ export default function Hero() {
               <h1 className="text-4xl md:text-6xl pb-10">Expert Solutions for<br /><span className="text-primary"><Typed /></span><span className="text-secondary">.</span></h1>
               <h2 className="text-2xl pb-10 text-center">Empower Your Business with Tailored IT Solutions</h2>
               <div className='text-center'>
-                <Button className='p-4 pt-5 text-xl' variant="secondary" asChild>
+                <Button className='p-4 pt-5 text-xl font-normal' variant="secondary" asChild>
                   <NextLink href="/#contact">
                     Let's Chat
                   </NextLink>

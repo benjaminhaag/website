@@ -2,20 +2,21 @@ import Hero from '@/components/Hero';
 import { Container } from '@/components/pulseui/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube, faWhatsapp, faLinkedinIn, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons"
-import Heading2 from '@/components/Heading2';
-import { faHeadset, faLightbulb, faCode, faGlobe, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Heading3, { Heading2 } from '@/components/Headings';
+import { faHeadset, faLightbulb, faCode, faGlobe, faArrowRight, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image';
 import Profile from '@media/profile.png';
 import Link from '@/components/Link';
+import NextLink from 'next/link';
+import Background from '@media/background.png';
+import { Button } from '@/components/ui/button';
 
 export default function HomePage() {
 
   return (
-    <main>
+    <main className='-mt-16'>
       <Hero />
       <section>
-        <div className='mt-16'>
-        </div>
         <Container>
           <Heading2>Tailored IT Solutions</Heading2>
           <p>
@@ -32,7 +33,7 @@ export default function HomePage() {
                   security to cloud optimization and compliance, we provide tailored guidance to ensure your technology 
                   supports your business goals.
                 </p>
-                <Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                {/*<Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>*/}
               </div>
             </div>
             <div className="p-[1px] rounded bg-[#595959aa] hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-secondary transition duration-300">
@@ -43,7 +44,7 @@ export default function HomePage() {
                   and SEO-optimized digital solutions that enhance visibility, drive engagement, and support business 
                   growth.
                 </p>
-                <Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                {/*<Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>*/}
               </div>
             </div>
             <div className="p-[1px] rounded bg-[#595959aa] hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-secondary transition duration-300">
@@ -54,7 +55,7 @@ export default function HomePage() {
                   hosting, IT automation, security solutions, and system integrations to keep your operations running 
                   smoothly and securely.
                 </p>
-                <Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                {/*<Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>*/}
               </div>
             </div>
             <div className="p-[1px] rounded bg-[#595959aa] hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-secondary transition duration-300">
@@ -66,7 +67,7 @@ export default function HomePage() {
                   it's web or app development, secure messaging, or scalable APIs, our custom solutions bring your 
                   ideas to life with reliability and performance in mind.
                 </p>
-                <Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                {/*<Link href="#" className='text-primary'>Read More <FontAwesomeIcon icon={faArrowRight} /></Link>*/}
               </div>
             </div>
           </div>
@@ -79,11 +80,11 @@ export default function HomePage() {
               Follow Me
             </div>
             <ul className='flex gap-2'>
-              <li><FontAwesomeIcon icon={faLinkedinIn} className="p-2 rounded hover:text-[#0a66c2]" /></li>
-              <li><FontAwesomeIcon icon={faYoutube} className="p-2 rounded hover:text-[#ff0000]" /></li>
+              <li><NextLink href="https://www.linkedin.com/in/haagbenjamin" target='_blank'><FontAwesomeIcon icon={faLinkedinIn} className="p-2 rounded hover:text-[#0a66c2]" /></NextLink></li>
+              {/*<li><FontAwesomeIcon icon={faYoutube} className="p-2 rounded hover:text-[#ff0000]" /></li>
               <li><FontAwesomeIcon icon={faInstagram} className="p-2 rounded hover:text-[#e1306c]" /></li>
-              <li><FontAwesomeIcon icon={faWhatsapp} className="p-2 rounded hover:text-[#128c7e]" /></li>
-              <li><FontAwesomeIcon icon={faGithub} className="p-2 rounded hover:text-[#333]" /></li>
+              <li><FontAwesomeIcon icon={faWhatsapp} className="p-2 rounded hover:text-[#128c7e]" /></li>*/}
+              <li><NextLink href="https://github.com/benjaminhaag" target='_blank'><FontAwesomeIcon icon={faGithub} className="p-2 rounded hover:text-[#333]" /></NextLink></li>
             </ul>
           </Container>
         </div>
@@ -112,8 +113,35 @@ export default function HomePage() {
                 to build, scale, and secure their own technology-driven projects.
               </p>
             </div>
-          </div>
+         </div>
         </Container>
+      </section>
+      <section style={{
+        backgroundImage: `url(${Background.src})`,
+        backgroundSize: 'cover'
+      }}>
+        <div className='bg-slate-900/40 w-full'>
+          <Container className='text-center my-0 py-12'>
+            <Heading2 id="contact">Let's Talk About You!</Heading2>
+            <p className='py-3'>
+              Feel free to cantact me directly
+            </p>
+            <ul className='flex gap-2 justify-center'>
+              <li><NextLink href="tel:+4915202164001"><FontAwesomeIcon icon={faPhone} size='xl' className="p-2 rounded hover:text-primary" /></NextLink></li>
+              <li><NextLink href="mailto:info@benjaminhaag.it"><FontAwesomeIcon icon={faEnvelope} size='xl' className="p-2 rounded hover:text-secondary" /></NextLink></li>
+              <li><NextLink href="https://www.linkedin.com/in/haagbenjamin" target='_blank'><FontAwesomeIcon icon={faLinkedinIn} size='xl' className="p-2 rounded hover:text-[#0a66c2]" /></NextLink></li>
+              {/*<li><FontAwesomeIcon icon={faWhatsapp} size='xl' className="p-2 rounded hover:text-[#128c7e]" /></li>*/}
+            </ul>
+            <p className='py-3'>
+              or schedule a Google meeting
+            </p>
+            <Button className='p-4 pt-5 text-xl font-normal' variant="secondary" asChild>
+              <NextLink href="/legal/calendly">
+                Book a Call
+              </NextLink>
+            </Button>
+          </Container>
+        </div>
       </section>
     </main>
   );

@@ -2,7 +2,6 @@ import React from 'react'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faYoutube, faWhatsapp, faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import NextLink from 'next/link';
 
 

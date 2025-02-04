@@ -23,13 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" className="scroll-p-20 scroll-smooth">
+      <html lang="en" className="scroll-p-20 scroll-smooth text-balance">
         <head />
         <body>
           <PostHogProvider>
             <NavBar />
-            {children}
-            <Footer />
+            <div className="flex flex-col min-h-dvh pt-16">
+              <div className="grow">
+                {children}
+              </div>
+              <Footer />
+            </div>
           </PostHogProvider>
         </body>
       </html>

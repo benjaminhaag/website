@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from "next/image"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 
-import defaultImage from "../../../media/default.jpg"
+import defaultImage from "@media/default.jpg"
 import { Metadata } from 'next';
 
 interface Post {

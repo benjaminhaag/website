@@ -5,8 +5,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type ParallaxProps = {
-  className: string,
-  children: React.ReactElement<LayerProps>[];
+  className?: string,
+  children: React.ReactElement<LayerProps> | React.ReactElement<LayerProps>[];
 };
 
 export default function Parallax({ className, children }: ParallaxProps) {

@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -15,6 +16,9 @@ import { Button } from './ui/button';
 import Link from './Link';
 
 export function NavBar() {
+
+    const [open, setOpen] = useState(false);
+
     return (
         <nav className='h-16 w-full bg-background/30 fixed top-0 border-b px-a backdrop-blur shadow-xl z-50'>
             <Container className='h-full flex items-center justify-between my-0'>
@@ -36,27 +40,27 @@ export function NavBar() {
                 </div>
                 <ul className='md:hidden flex w-full justify-end space-x-4 items-center'>
 
-                    <Sheet>
-                        <SheetTrigger>
+                    <Sheet open={open} onOpenChange={setOpen}>
+                        <SheetTrigger onClick={() => {setOpen(true)}}>
                             <HamburgerMenuIcon className='size-7' />
                         </SheetTrigger>
                         <SheetContent>
                           <ul className='mt-8 flex flex-col gap-4 space-x-4 items-center justify-center w-8/12 lg:gap-12'>
                             <li>
-                              <Link href="tel:+4915202164001">
+                              <Link href="tel:+4915202164001" onClick={()=>{setOpen(false)}}>
                                 <FontAwesomeIcon className='pr-1' icon={faPhone} size='xs'/>
                                 +49 152 02164001
                               </Link>
                             </li>
                             <li>
-                              <Link href="mailto:info@benjaminhaag.it">
+                              <Link href="mailto:info@benjaminhaag.it" onClick={()=>{setOpen(false)}}>
                                 <FontAwesomeIcon icon={faEnvelope} className='pr-1' size='xs'/>
                                 info@benjaminhaag.it
                               </Link>
                             </li>
                             <li>
                               <Button className='p-1 px-4 pt-2 border-secondary' variant="outline" asChild>
-                                <NextLink href="/#contact">
+                                <NextLink href="/#contact" onClick={()=>{setOpen(false)}}>
                                   Book a Call
                                 </NextLink>
                               </Button>

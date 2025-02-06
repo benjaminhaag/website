@@ -13,7 +13,7 @@ export default function Footer() {
             <div>
              Copyright&copy;2025 - <Link href="https://benjaminhaag.it/">Benjamin Haag</Link>
             </div>
-            <ul className='flex gap-4'>
+            <ul className='flex gap-4 flex-col md:flex-row items-center'>
               <li><Link href="/legal/imprint">Imprint</Link></li>
               <li><Link href="/legal/privacy">Privacy Policy</Link></li>
             </ul>

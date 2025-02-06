@@ -6,7 +6,7 @@ type HeadingProps = {
 
 export function Heading1({ id, children } : HeadingProps) {
   return (
-    <h1 id={id} className='text-5xl py-6'>
+    <h1 id={id} className='text-5xl py-6 text-center'>
       { children }
     </h1>
   )
@@ -14,7 +14,7 @@ export function Heading1({ id, children } : HeadingProps) {
 
 export function Heading2({ id, children } : HeadingProps) {
   return (
-    <h2 id={id} className='text-5xl py-6'>
+    <h2 id={id} className='text-5xl py-6 text-center'>
       { children }
     </h2>
   )

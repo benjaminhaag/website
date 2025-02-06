@@ -45,7 +45,7 @@ export function NavBar() {
                             <HamburgerMenuIcon className='size-7' />
                         </SheetTrigger>
                         <SheetContent>
-                          <ul className='mt-8 flex flex-col gap-4 space-x-4 items-center justify-center w-8/12 lg:gap-12'>
+                          <ul className='mt-8 flex flex-col gap-4 space-x-4 items-center justify-center lg:gap-12'>
                             <li>
                               <Link href="tel:+4915202164001" onClick={()=>{setOpen(false)}}>
                                 <FontAwesomeIcon className='pr-1' icon={faPhone} size='xs'/>

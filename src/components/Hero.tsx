@@ -18,7 +18,7 @@ export default function Hero() {
       </Layer>
       <Layer speed={0.2}>
         <div className='relative h-dvh w-full'>
-          <Container className='h-full pt-12 flex items-center justify-end'>
+          <Container className='h-full pt-12 items-center justify-end hidden md:flex'>
             <Image alt="Background Image" sizes='100vw' className='h-[150%] w-auto -mb-[40%] -mr-[10%]' src={Box} />
           </Container>
         </div>
@@ -26,7 +26,7 @@ export default function Hero() {
       <Layer speed={0.5}>
         <div className='relative h-dvh w-full flex items-center justify-start'>
           <Container>
-            <div className='w-[50%]'>
+            <div className='md:w-[50%] text-center md:text-left'>
               <h1 className="text-4xl md:text-6xl pb-10">Expert Solutions for<br /><span className="text-primary"><Typed /></span><span className="text-secondary">.</span></h1>
               <h2 className="text-2xl pb-10 text-center">Empower Your Business with Tailored IT Solutions</h2>
               <div className='text-center'>

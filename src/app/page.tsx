@@ -23,7 +23,7 @@ export default function HomePage() {
             to help businesses scale, optimize, and stay secure. Whether you need a website, a robust IT 
             infrastructure, or specialized software, we deliver solutions that fit your needs.
           </p>
-          <div className='grid grid-cols-2 gap-4 py-10'>
+          <div className='grid md:grid-cols-2 gap-4 py-10'>
             <div className="p-[1px] rounded bg-[#595959aa] hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-secondary transition duration-300">
               <div className='bg-slate-900 rounded p-4 hover:bg-slate-800 transition duration-300 h-full'>
                 <h3 className='text-2xl py-3 font-bold'><FontAwesomeIcon icon={faHeadset} className='pr-3' /> Consulting & Support</h3>
@@ -91,7 +91,7 @@ export default function HomePage() {
       <section>
         <Container>
           <Heading2>Benjamin Haag</Heading2>
-          <div className='flex gap-6'>
+          <div className='flex gap-6 flex-col items-center md:flex-row md:items-start'>
             <div>
               <div className='relative w-[200px] h-[200px]'>
                 <Image alt="Benjamin Haag" className='rounded-full' src={Profile} layout="fill" objectFit='cover' objectPosition='center' />

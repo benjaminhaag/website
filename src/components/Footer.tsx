@@ -9,7 +9,7 @@ export default function Footer() {
   return (
       <section className="flex bg-gradient-to-l bg-[#161B24]">
         <div className='bg-slate-900/40 w-full'>
-          <Container className='flex justify-between my-2 items-center'>
+          <Container className='flex flex-col gap-4 md:flex-row justify-between my-2 items-center'>
             <div>
              Copyright&copy;2025 - <Link href="https://benjaminhaag.it/">Benjamin Haag</Link>
             </div>

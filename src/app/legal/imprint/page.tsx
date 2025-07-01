@@ -8,7 +8,6 @@ export default function Page() {
       <div className='prose prose-invert max-w-full'>
         
         <p>Benjamin Haag<br />
-        Benjamin Haag<br />
         Pestalozzistra&szlig;e, 26<br />
         90429 N&uuml;rnberg</p>
         

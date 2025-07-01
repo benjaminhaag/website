@@ -1,4 +1,5 @@
 import { Heading1 } from '@/components/Headings'
+import OptOut from '@/components/optOut'
 import React from 'react'
 
 export default function Page() {
@@ -67,6 +68,8 @@ CA 94114</p>
 <h3>Google Meet</h3> <p>We use Google Meet. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. For details on data processing, please see the Google privacy policy: <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=en</a>.</p>
 <p>The company is certified in accordance with the &ldquo;EU-US Data Privacy Framework&rdquo; (DPF). The DPF is an agreement between the European Union and the US, which is intended to ensure compliance with European data protection standards for data processing in the US. Every company certified under the DPF is obliged to comply with these data protection standards. For more information, please contact the provider under the following link: <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noopener noreferrer">https://www.dataprivacyframework.gov/participant/5780</a>.</p>
 
+        <h2>Opt Out</h2>
+        <OptOut />
       </div>
     </div>
   )
